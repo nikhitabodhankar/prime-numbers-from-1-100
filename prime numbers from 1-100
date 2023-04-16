@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace how_many_prime_numbers_in_array
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+           
+            Console.WriteLine("print prime numbers from given array");
+            for (int no = 1; no <= 100; no++)
+            {
+                int temp = 0;
+                for (int i = 2; i <= no - 1; i++)
+                {
+                    if (no % i == 0)
+                    {
+                        temp = temp + 1;
+                    }
+                }
+                if (temp == 0)
+                {
+                    Console.WriteLine(no);
+                }
+            }
+     
+            Console.ReadLine();
+        }
+        
+    }
+}
